@@ -10,3 +10,6 @@ There are included two standard ino files for original Adalight with no RGB flas
 Other ino files are using FastLED library. You can read more at http://fastled.io/
 Ino files for WS2812b has not been tested, but they should work.
 Ino files used for WS2801 has been tested on both controllers and are working fine.
+
+
+![](https://github.com/iLLiac4/Adalight_Hyperion/blob/master/Ambilight_bb.png)
