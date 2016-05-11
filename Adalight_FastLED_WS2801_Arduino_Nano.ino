@@ -31,8 +31,7 @@
   ///// User definitions /////
 
   // Define the number of LEDs. 
-  // Note that num_led parameter has no influence when used with Hyperion. You can leave it as it is.
-  #define NUM_LEDS 48
+  #define NUM_LEDS 150
   // Define Data Pin
   #define DATA_PIN 11
   #define CLOCK_PIN 13
