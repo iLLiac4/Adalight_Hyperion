@@ -60,8 +60,7 @@
 
 #include <FastLED.h>
 
-// Hyperion should ignore those settings. 
-#define NUM_LEDS 60
+#define NUM_LEDS 150
 #define DATA_PIN 16
 CRGB leds[NUM_LEDS];
 
