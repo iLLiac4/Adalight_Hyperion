@@ -48,7 +48,7 @@
 //
 //  This version uses the LIB FastLED to work with the WS2812b LEDs.
 //  
-//  This Version works with a 60LED-Stripe with a frames/sec: 61, bytes/sec: 11524
+//  This Version works with a 150LED-Stripe with a frames/sec: 61, bytes/sec: 11524
 //    tested with the programme colorswirl (see the C folder) and an Arduino UNO. 
 //
 //  TOOD:
@@ -60,9 +60,7 @@
 
 #include <FastLED.h>
 
-
-// Hyperion should ignore those settings. 
-#define NUM_LEDS 60
+#define NUM_LEDS 150
 #define DATA_PIN 6
 CRGB leds[NUM_LEDS];
 
