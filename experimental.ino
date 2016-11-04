@@ -9,7 +9,7 @@
 #define CLOCK_PIN 15
 #define GROUND_PIN 10
 #define BRIGHTNESS 255 // maximum brightness
-#define SPEED 500000 // virtual serial port speed, must be the same in boblight_config 
+#define SPEED 500000 // virtual serial port speed, must be the same in .config 
 
 CRGB leds[NUM_LEDS];
 uint8_t * ledsRaw = (uint8_t *)leds;
@@ -39,7 +39,7 @@ static const uint8_t magic[] = {
 // If no serial data is received for a while, the LEDs are shut off
 // automatically.  This avoids the annoying "stuck pixel" look when
 // quitting LED display programs on the host computer.
-static const unsigned long serialTimeout = 150000; // 150 seconds
+static const unsigned long serialTimeout = 30000; // 30 seconds
 
 void setup()
 {
