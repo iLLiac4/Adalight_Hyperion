@@ -1,6 +1,5 @@
-// Slightly modified Adalight protocol implementation that uses FastLED
-// library (http://fastled.io) for driving WS2811/WS2812 led stripe
-// Was tested only with Prismatik software from Lightpack project
+// Adalight protocol implementation that uses FastLED
+// library (http://fastled.io) for driving different led stripe
 
 #include "FastLED.h"
 
@@ -8,7 +7,7 @@
 #define DATA_PIN 16
 #define CLOCK_PIN 15
 #define GROUND_PIN 10
-#define BRIGHTNESS 255 // maximum brightness
+#define BRIGHTNESS 255 // Maximum brightness
 #define SPEED 500000 // virtual serial port speed, must be the same in .config 
 
 CRGB leds[NUM_LEDS];
@@ -73,14 +72,23 @@ void setup()
   // FastLED.addLeds<LPD1886_8BIT, DATA_PIN, RGB>(leds, NUM_LEDS);
   
   // FastLED.addLeds<LPD8806, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
-   FastLED.addLeds<WS2801 , DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
+     FastLED.addLeds<WS2801 , DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
   // FastLED.addLeds<WS2803 , DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
   // FastLED.addLeds<SM16716, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
   // FastLED.addLeds<P9813  , DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
   // FastLED.addLeds<APA102 , DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
   // FastLED.addLeds<SK9822 , DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
   // FastLED.addLeds<DOTSTAR, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
-  //  FastLED.setBrightness( BRIGHTNESS );
+  // FastLED.setBrightness( BRIGHTNESS );
+
+  // initial RGB flash (comment if you do not want RGB flash)
+  LEDS.showColor(CRGB(255, 0, 0));
+  delay(250);
+  LEDS.showColor(CRGB(0, 255, 0));
+  delay(250);
+  LEDS.showColor(CRGB(0, 0, 255));
+  delay(250);
+  LEDS.showColor(CRGB(0, 0, 0));
 
   // Dirty trick: the circular buffer for serial data is 256 bytes,
   // and the "in" and "out" indices are unsigned 8-bit types -- this
