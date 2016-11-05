@@ -1,4 +1,3 @@
-//
 // Arduino serial-interface for controlling a single rgb LED (or LED strip). The serial interface is based on the
 // Adalight protocol. The protocol is as follows:
 // [prefix][led count][checksum][red, green, blue]*
@@ -6,7 +5,6 @@
 // led count := number of leds - 1  (uint16_t big endian)
 // checksum  := led count high bit XOR led count low bit XOR 0x55 (uint8_t)
 // red, green, blue := channel intensity [0-255] (uint8_t)
-//
 
 // Wiring diagram
 // Check http://www.jerome-bernard.com/blog/2013/01/12/rgb-led-strip-controlled-by-an-arduino/
