@@ -38,7 +38,7 @@ static const uint8_t magic[] = {
 // If no serial data is received for a while, the LEDs are shut off
 // automatically.  This avoids the annoying "stuck pixel" look when
 // quitting LED display programs on the host computer.
-static const unsigned long serialTimeout = 30000; // 30 seconds
+static const unsigned long serialTimeout = 15000; // 15 seconds
 
 void setup()
 {
