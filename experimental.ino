@@ -1,5 +1,5 @@
 // Adalight protocol implementation that uses FastLED
-// library (http://fastled.io) for driving different led stripe
+// library (http://fastled.io) FastLED v3.001 for driving different led stripe
 
 #include "FastLED.h"
 
