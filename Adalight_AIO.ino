@@ -23,7 +23,7 @@
 #define MAX_LEDS 500
 
 // type of your led controller, possible values, see below
-#define LED_TYPE WS2812B 
+#define LED_TYPE WS2801
 
 // 3 wire (pwm): NEOPIXEL BTM1829 TM1812 TM1809 TM1804 TM1803 UCS1903 UCS1903B UCS1904 UCS2903 WS2812 WS2852
 //               S2812B SK6812 SK6822 APA106 PL9823 WS2811 WS2813 APA104 WS2811_40 GW6205 GW6205_40 LPD1886 LPD1886_8BIT 
@@ -32,9 +32,11 @@
 // For 3 wire led stripes line Neopixel/Ws2812, which have a data line, ground, and power, you just need to define DATA_PIN.
 // For led chipsets that are SPI based (four wires - data, clock, ground, and power), both defines DATA_PIN and CLOCK_PIN are needed
 
-// DATA_PIN, or DATA_PIN, CLOCK_PIN
-#define LED_PINS 6        // 3 wire leds
-//#define LED_PINS 6, 13  // 4 wire leds
+// DATA_PIN, or DATA_PIN, CLOCK_PIN https://raw.githubusercontent.com/iLLiac4/Adalight_Hyperion/master/Ambilight_bb.png
+//#define LED_PINS 16        // 3 wire leds - Mini Pro 32u4; Leonardo
+//#define LED_PINS 16, 15  // 4 wire leds - Mini Pro 32u4; Leonardo
+//#define LED_PINS 6        // 3 wire leds - Arduino Nano
+#define LED_PINS 11, 13  // 4 wire leds - Arduino Nano
 
 #define COLOR_ORDER GRB  // colororder of the stripe, set RGB in hyperion
 
